@@ -5,7 +5,7 @@ public class CircularQueueArray {
         int front = -1;
         int rear = -1;
         int size = 0;
-        int [] arr = new int[8];
+        int [] arr = new int[4];
         public void add(int val) throws Exception{
             if(size == arr.length){
                 throw new Exception("Queue is Full!");
@@ -46,7 +46,7 @@ public class CircularQueueArray {
                 System.out.println("Queue is Empty!");
             }
             else if(front<=rear){
-                for (int i=front; i<arr.length; i++){
+                for (int i=front; i<rear; i++){
                     System.out.print(arr[i]+ " ");
                 }
             }
@@ -69,8 +69,15 @@ public class CircularQueueArray {
         c.add(2);
         c.add(3);
         c.display();
+        c.remove();
+        System.out.println("The top most element of Queue is : "+c.peek());
+        c.display();
         c.add(4);
-        c.peek();
+        c.add(5);
+        c.display();
+        for (int i=0; i<c.arr.length; i++){
+            System.out.print(c.arr[i]+" ");
+        }
 
 
 
