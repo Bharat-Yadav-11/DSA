@@ -71,22 +71,22 @@ public class LLPractice {
 
        void deleteAtEnd(){
             if(head == null){
-                System.out.println("Linked List is Empty");
-                return;
-            } else {
-                if (head != tail) {
+                System.out.println("List is Empty");
+            }
+            else {
+                if(head != tail){
                     Node curr = head;
                     while(curr.next != tail){
                         curr = curr.next;
                     }
                     tail = curr;
                     tail.next = null;
-                } 
-                else{
+                }
+                else {
                     head = tail = null;
-                    }               
+                }
+                size--;
             }
-            
         } 
 
         void display(){
