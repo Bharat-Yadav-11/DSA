@@ -69,6 +69,26 @@ public class LLPractice {
         }
 
 
+       void deleteAtEnd(){
+            if(head == null){
+                System.out.println("Linked List is Empty");
+                return;
+            } else {
+                if (head != tail) {
+                    Node curr = head;
+                    while(curr.next != tail){
+                        curr = curr.next;
+                    }
+                    tail = curr;
+                    tail.next = null;
+                } 
+                else{
+                    head = tail = null;
+                    }               
+            }
+            
+        } 
+
         void display(){
             Node temp = head;
             while (temp != null){
