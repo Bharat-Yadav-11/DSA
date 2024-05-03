@@ -72,7 +72,7 @@ public class QueueImplementationUsingArray {
 
            }
 
-             rear–;        
+             rear--;        
 
            return front;
 
